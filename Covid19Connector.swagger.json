@@ -1,0 +1,72 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Covid19Connector",
+    "description": "This connector displays the daily cases for Covid-19 to help you stay alert",
+    "version": "1.0"
+  },
+  "host": "api.covid19api.com",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/": {},
+    "/summary": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "NewConfirmed": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "NewConfirmed"
+                },
+                "TotalConfirmed": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "TotalConfirmed"
+                },
+                "NewDeaths": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "NewDeaths"
+                },
+                "TotalDeaths": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "TotalDeaths"
+                },
+                "NewRecovered": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "NewRecovered"
+                },
+                "TotalRecovered": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "TotalRecovered"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Returns the summary of the situation of Covid-19 across the globe",
+        "description": "This API returns the data of Covid across the world, for each country",
+        "operationId": "FetchCovidData",
+        "parameters": []
+      }
+    }
+  },
+  "definitions": {},
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {},
+  "security": [],
+  "tags": []
+}
